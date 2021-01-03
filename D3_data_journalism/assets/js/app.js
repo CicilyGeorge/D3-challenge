@@ -121,7 +121,7 @@ chosenYAxis =  "healthcare";
 
 
 // Import Data
-d3.csv("assets/data/data.csv").then(function(healthData, err) {
+d3.csv("D3_data_journalism/assets/data/data.csv").then(function(healthData, err) {
   
   if (err) throw err;
     // Parse Data/Cast as numbers
