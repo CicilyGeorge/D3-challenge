@@ -36,7 +36,8 @@ function xScale(healthData, chosenXAxis) {
 function yScale(healthData, chosenYAxis) {
   // create scales
   var yLinearScale = d3.scaleLinear()
-    .domain([0, d3.max(healthData, d => d[chosenYAxis])])
+    .domain([d3.min(healthData, d => d[chosenYAxis]) * 0.8, 
+      d3.max(healthData, d => d[chosenYAxis]) * 1.2])
     .range([height, 0]);
 
   return yLinearScale;
@@ -191,13 +192,13 @@ d3.csv("assets/data/data.csv").then(function(healthData, err) {
 
     var ageLabel = xlabelsGroup.append("text")
       .attr("transform", `translate(${width / 2}, ${height + margin.top + 50})`)
-      .attr("class", "axisText")
+      .attr("class", "axisText inactive")
       .attr("value", "age")
       .text("Age (Median)");
 
     var incomeLabel = xlabelsGroup.append("text")
       .attr("transform", `translate(${width / 2}, ${height + margin.top + 70})`)
-      .attr("class", "axisText")
+      .attr("class", "axisText inactive")
       .attr("value", "income")
       .text("Hosehold Income (Median)");
 
@@ -211,7 +212,7 @@ d3.csv("assets/data/data.csv").then(function(healthData, err) {
       .attr("y", 0 - margin.left + 10)
       .attr("x", 0 - (height / 2))
       .attr("dy", "1em")
-      .attr("class", "axisText")
+      .attr("class", "axisText inactive")
       .attr("value", "obesity")
       .text("Obese (%)");
 
@@ -220,7 +221,7 @@ d3.csv("assets/data/data.csv").then(function(healthData, err) {
       .attr("y", 0 - margin.left + 30)
       .attr("x", 0 - (height / 2))
       .attr("dy", "1em")
-      .attr("class", "axisText")
+      .attr("class", "axisText inactive")
       .attr("value", "smokes")
       .text("Smokes (%)");
 

@@ -6,13 +6,12 @@
   <title>D3Times</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/d3Style.css">
 
 </head>
 
 <body>
   <div id="header">
-    <div class="container">
+    <div class="container-fluid">
       <div class="jumbotron text-center">
         <div class="col-xs-12 col-md-12">
           <h1>D3Times</h1>
@@ -22,29 +21,37 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-xs-12  col-md-9">
-        <div id="scatter">
+      <div class="col-md-12">
+        <div class="article-title">
+          <h2>Correlations Discovered Between Health Risks and Age, Income</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="scatter" class="d-flex justify-content-center">
           <div id="my_dataviz"></div>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12  col-md-9">
+      <div class="col-md-12">
         <div class="article">
-          <h2>Correlations Discovered Between Health Risks and Age, Income</h2>
-          <p>The five leading global risks for mortality in the
-            world are high blood pressure, tobacco use, high
-            blood glucose, physical inactivity, and overweight
-            and obesity. They are responsible for raising the risk
-            of chronic diseases, such as heart disease and cancers. They affect the country across all income groups:
-            high, middle and low</p>
+          <p class="fig-name">(An Interactive chart that shows correlation between Healthcare And Income, Age and other factors)</p>
 
           <p>Socioeconomic factors are important determinants of health and wellbeing in the United States.
             The higher a person’s income, education or occupation level, the healthier they tend
             to be—a phenomenon often termed the ‘social gradient of health’. In general, people
             from lower socioeconomic groups are at greater risk of poor health, have higher rates
-            of illness, disability and death, and live shorter lives than those from higher groups </p>
-          
+            of illness, disability and death, and live shorter lives than those from higher groups.
+          </p>
+          <p>The five leading global risks for mortality in the
+            world are high blood pressure, tobacco use, high
+            blood glucose, physical inactivity, and overweight
+            and obesity. They are responsible for raising the risk
+            of chronic diseases, such as heart disease and cancers. They affect the country across all income groups:
+            high, middle and low.
+          </p>    
         </div>
       </div>
     </div>
@@ -52,7 +59,8 @@
 
   <!-- Footer-->
   <div id="footer">
-    <!-- <p>The Coding Boot Camp&copy;2016</p> -->
+    <p>The D3 Times</p>
+    <p>Developed by Cicily George</p>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
